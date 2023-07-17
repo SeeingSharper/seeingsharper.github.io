@@ -19,3 +19,6 @@ Seeing Sharper is not just about the technicalities of the software world, but a
 Life, as we know, extends beyond coding. And there are lessons that life teaches us that no textbook can. At Seeing Sharper, we delve into these valuable life lessons, providing advice and insights that could serve as a guide in your personal and professional journey.
 
 Join me in this endeavor as we explore the intricate world of .NET, navigate the software industry, discuss mental health, share life lessons, and above all, start Seeing Sharper.
+
+Cheers,
+Tony
