@@ -1,5 +1,13 @@
-# The Power and Flexibility of C# and .NET
+---
+title:  "An ode to C# and .NET"
+categories: blog, dotnet
+tags: dotnet, csharp
+author: Tony Hicks
+---
+
 ## This Ain't Your Daddy's Microsoft
+I feel the need to address this as soon as possible.
+
 In my interactions with people using different tech stacks, I often find myself reflecting on their reactions when I mention that I develop using .NET (pronounced 'dot net'). It seems as though this reaction is predominantly due to the association with Microsoft - which some people still perceive as a negative. When prodded a bit further, this reaction seems to be a hangover from the Microsoft of the 90s. The perception they still seem to have is of Steve Ballmer's Microsoft when he famously dubbed open-source as a "cancer." While I understand their hesitation, I also find it slightly ironic - and somewhat amusing - that many of these critics frequently use VSCode (an excellent Microsoft product) as their primary editor and push their code to repositories on (Microsoft-owned) GitHub.
 
 One of the key indicators of Microsoft's culture shift has been none other than Mark Russinovich, once a vocal critic of Microsoft's practices, now the man responsible for Microsoft's cloud platform, Azure. Known for his profound technical expertise and history of shedding light on Microsoft's dishonest business practices in the past, Russinovich's transition from critic to key contributor signifies a tremendous shift in Microsoft's approach to openness and the open-source community.
