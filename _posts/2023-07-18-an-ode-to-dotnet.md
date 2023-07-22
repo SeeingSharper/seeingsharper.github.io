@@ -1,8 +1,7 @@
 ---
-title:  "An ode to C# and .NET"
-categories: blog, dotnet
-tags: dotnet, csharp
-author: Tony Hicks
+title: An ode to C# and .NET
+categories: [blogging, dotnet]
+tags: [dotnet, csharp]
 ---
 
 ## This Ain't Your Daddy's Microsoft
