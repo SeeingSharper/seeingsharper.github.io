@@ -8,15 +8,18 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
+    pageTitle: "Seeing Sharper",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
       provider: "plausible",
+      // If you configure a custom domain name in Plausible, you can add options here
+      // e.g., domain: "seeingsharper.dev"
     },
     locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
+    // Use one canonical base domain; .com and .net can point/redirect to this
+    baseUrl: "https://seeingsharper.dev",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
@@ -83,6 +86,7 @@ const config: QuartzConfig = {
       Plugin.ContentIndex({
         enableSiteMap: true,
         enableRSS: true,
+        // baseUrl is taken from configuration.baseUrl; no need to repeat here
       }),
       Plugin.Assets(),
       Plugin.Static(),
