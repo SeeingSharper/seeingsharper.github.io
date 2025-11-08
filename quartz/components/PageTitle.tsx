@@ -26,6 +26,7 @@ PageTitle.css = `
   flex-direction: column;
   align-items: flex-start;
   gap: 0.5rem;
+  padding: 1.5rem;
 }
 
 .ascii-logo {
@@ -48,6 +49,11 @@ PageTitle.css = `
   font-size: 1.75rem;
   margin: 0;
   font-family: var(--titleFont);
+}
+
+.page-title a {
+  text-decoration: none;
+  border-bottom: none;
 }
 `
 
