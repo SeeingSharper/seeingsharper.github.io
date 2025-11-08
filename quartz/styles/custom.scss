@@ -1,118 +1,129 @@
 @use "./base.scss";
 
-// Starcraft-inspired custom styling
+// Sketch pad / notebook aesthetic - minimal and clean
 
-// Glowing effect for headers
-h1, h2, h3, h4, h5, h6 {
-  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+// Hand-drawn style underlines for headers
+h1, h2, h3 {
+  border-bottom: 2px solid var(--dark);
+  padding-bottom: 0.3em;
+
+  // Add a subtle hand-drawn wobble effect
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--secondary);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  &:hover::after {
+    opacity: 0.3;
+  }
 }
 
-// Metallic borders and panels
-.page,
+// Simple red accent on links
+a {
+  color: var(--secondary);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--secondary);
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+  }
+}
+
+// Clean borders - sketch notebook style
 .sidebar,
 .left-sidebar,
 .right-sidebar {
-  border: 2px solid;
-  border-image: linear-gradient(135deg, #00d4ff 0%, #3a4a5f 50%, #ff9500 100%) 1;
-  box-shadow:
-    0 0 20px rgba(0, 212, 255, 0.3),
-    inset 0 0 20px rgba(0, 212, 255, 0.05);
+  border-left: 3px solid var(--lightgray);
+  padding-left: 1.5rem;
 }
 
-// Button and link styling
-a {
-  color: var(--secondary);
-  text-shadow: 0 0 5px rgba(0, 212, 255, 0.3);
-  transition: all 0.3s ease;
-
-  &:hover {
-    color: var(--tertiary);
-    text-shadow: 0 0 10px rgba(255, 149, 0, 0.6);
-  }
+// Simple box for code blocks
+pre {
+  border-left: 4px solid var(--secondary);
+  background: var(--lightgray);
 }
 
-// Search bar styling
-.search-container input {
-  background: linear-gradient(135deg, rgba(26, 32, 51, 0.8), rgba(42, 49, 71, 0.8));
-  border: 1px solid var(--secondary);
-  box-shadow:
-    0 0 10px rgba(0, 212, 255, 0.2),
-    inset 0 0 10px rgba(0, 0, 0, 0.5);
-
-  &:focus {
-    border-color: var(--tertiary);
-    box-shadow:
-      0 0 15px rgba(255, 149, 0, 0.4),
-      inset 0 0 10px rgba(0, 0, 0, 0.5);
-  }
-}
-
-// Code blocks with sci-fi styling
-pre,
 code {
-  border: 1px solid rgba(0, 212, 255, 0.3);
-  box-shadow: 0 0 10px rgba(0, 212, 255, 0.1);
+  background: var(--lightgray);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
 }
 
-// Sidebar section borders
-.desktop-only,
-.page-title,
-.explorer,
-.toc {
-  border-left: 3px solid;
-  border-image: linear-gradient(180deg, #00d4ff 0%, #ff9500 100%) 1;
-  padding-left: 1rem;
-  margin-bottom: 2rem;
-}
-
-// Footer styling
-footer {
-  border-top: 2px solid;
-  border-image: linear-gradient(90deg, #00d4ff 0%, #3a4a5f 50%, #ff9500 100%) 1;
-  box-shadow: 0 -5px 20px rgba(0, 212, 255, 0.2);
-}
-
-// Backlinks styling
-.backlinks {
-  border: 1px solid rgba(0, 212, 255, 0.3);
-  background: linear-gradient(135deg, rgba(26, 32, 51, 0.6), rgba(42, 49, 71, 0.6));
-  padding: 1rem;
-  border-radius: 4px;
-  box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
-}
-
-// Tag styling
+// Clean tags - like sticky notes
 .tags a {
-  background: linear-gradient(135deg, rgba(0, 212, 255, 0.2), rgba(255, 149, 0, 0.2));
-  border: 1px solid var(--secondary);
+  background: var(--lightgray);
+  border: 1px solid var(--gray);
   padding: 0.25rem 0.75rem;
   border-radius: 3px;
-  text-transform: uppercase;
   font-size: 0.85em;
-  letter-spacing: 0.05em;
+  border-bottom: none;
 
   &:hover {
-    background: linear-gradient(135deg, rgba(255, 149, 0, 0.3), rgba(0, 212, 255, 0.3));
-    border-color: var(--tertiary);
-    box-shadow: 0 0 10px rgba(255, 149, 0, 0.4);
+    background: var(--highlight);
+    border-color: var(--secondary);
   }
 }
 
-// Accent lines and dividers
+// Simple dividers
 hr {
   border: none;
-  height: 2px;
-  background: linear-gradient(90deg, transparent 0%, var(--secondary) 50%, transparent 100%);
-  box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+  border-top: 2px dashed var(--gray);
+  margin: 2rem 0;
 }
 
-// Popover styling
-.popover {
-  border: 2px solid var(--secondary);
-  background: linear-gradient(135deg, rgba(10, 14, 26, 0.95), rgba(26, 32, 51, 0.95));
-  box-shadow:
-    0 0 30px rgba(0, 212, 255, 0.4),
-    inset 0 0 20px rgba(0, 212, 255, 0.1);
+// Footer with simple top border
+footer {
+  border-top: 2px solid var(--lightgray);
+  margin-top: 3rem;
+}
+
+// Backlinks box - like a note card
+.backlinks {
+  border: 2px solid var(--lightgray);
+  background: var(--light);
+  padding: 1rem;
+  margin-top: 2rem;
+
+  h3 {
+    border-bottom: 1px solid var(--gray);
+    color: var(--secondary);
+  }
+}
+
+// Clean search bar
+.search-container input {
+  border: 2px solid var(--gray);
+  border-radius: 4px;
+  background: var(--light);
+
+  &:focus {
+    border-color: var(--secondary);
+    outline: none;
+  }
+}
+
+// Table of contents - clean list style
+.toc {
+  border-left: 3px solid var(--secondary);
+  padding-left: 1rem;
+
+  a {
+    border-bottom: none;
+
+    &:hover {
+      color: var(--secondary);
+      border-bottom: 1px solid var(--secondary);
+    }
+  }
 }
