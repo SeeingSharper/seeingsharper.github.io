@@ -6,6 +6,7 @@ tags:
   - spiritual
 title: It's all Mind
 created: 2025-04-09
+date:
 ---
 
 

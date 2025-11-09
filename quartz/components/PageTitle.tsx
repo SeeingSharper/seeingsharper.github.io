@@ -41,7 +41,19 @@ PageTitle.css = `
 }
 
 .ascii-logo .eyes {
-  color: var(--secondary);
+  background: linear-gradient(
+    90deg,
+    #ff0066,
+    #ff6600,
+    #ffcc00,
+    #00ff66,
+    #00ccff,
+    #0066ff,
+    #cc00ff
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: bold;
 }
 
