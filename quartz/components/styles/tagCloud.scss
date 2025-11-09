@@ -1,0 +1,37 @@
+@use "../../styles/variables.scss" as *;
+
+.tag-cloud {
+  flex-direction: column;
+
+  & > h3 {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  & > .tag-cloud-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    line-height: 2;
+
+    & > a.internal.tag-cloud-link {
+      display: inline-block;
+      color: var(--secondary);
+      text-decoration: none;
+      transition: all 0.2s ease;
+      padding: 0.1rem 0.3rem;
+      border-radius: 4px;
+      white-space: nowrap;
+
+      &:hover {
+        background-color: var(--highlight);
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
