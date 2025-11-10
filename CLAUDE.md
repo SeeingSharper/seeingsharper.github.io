@@ -1,6 +1,10 @@
 # CLAUDE.md
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+s
+## Instructions
+
+Do not run any commands to build or run the site. I will do that myself. You just make the changes and I will do the rest.
 
 ## Project Overview
 
