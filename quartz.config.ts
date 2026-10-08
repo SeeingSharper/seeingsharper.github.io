@@ -19,7 +19,7 @@ const config: QuartzConfig = {
     },
     locale: "en-US",
     // Use one canonical base domain; .com and .net can point/redirect to this
-    baseUrl: "https://seeingsharper.dev",
+    baseUrl: "seeingsharper.com",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
